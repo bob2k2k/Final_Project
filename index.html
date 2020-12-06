@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="start_page">
+
+        <h1>Tic Tac Toe!!</h1>
+
+        <h2>Welcome player 1, what is your name?</h2>
+        <input id="playerOneNameInput" type = "text"/>
+
+        <h2>Welcome player 2, what is your name?</h2>
+        <input id="playerTwoNameInput" type = "text"/>
+
+        <h3>Game Rules:</h3>
+        <p>Player 1 is X. Player 2 is O. Each player takes a turn selecting a spot on the game board. First player to 3 in a row wins! 
+            <br>Can be vertical, horizontal, or diagonal! Good Luck!!
+        </p>
+
+        <h3>Source Reference:</h3>
+        <p>
+            Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+        </p>
+        <button id="start_button" disabled>START</button>
+    </div>
+
+
+
+
+    <div id="game_board_page">
+
+        <h2><span id="players_turn_name"></span>'s Turn</h2>
+
+        <div id="game_board">
+            <div class="row">
+                <div id="top_left" class="board"></div>
+                <div id="top_middle" class="vertical board"></div>
+                <div id="top_right" class="board"></div>
+            </div>
+
+            <div class="row">
+                <div id="mid_left" class="horizontal board"></div>
+                <div id="mid_middle" class="horizontal vertical board"></div>
+                <div id="mid_right" class="horizontal board"></div>
+            </div>
+
+            <div class="row">
+                <div id="bottom_left" class="board"></div>
+                <div id="bottom_middle" class="vertical board"></div>
+                <div id="bottom_right" class="board"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div id="winner_overlay">
+
+        <h2 id="winner" class="top_banner"></h2>
+        <h2 id="draw" class="top_banner">It's a Draw!!</h2>
+        <p>Are the same players playing again?</p>
+        <button id="play_again_same_players">Yes</button>
+        <button id="play_again_new_players">No</button>
+
+        <h3 onClick="window.open('high_scores.php')">Click Here To See Top 10 Winners</h3>
+    </div>
+
+
+</body>
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</html>
